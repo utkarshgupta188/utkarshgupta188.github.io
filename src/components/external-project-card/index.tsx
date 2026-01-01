@@ -12,6 +12,7 @@ const ExternalProjectCard = ({
 }: {
   externalProjects: SanitizedExternalProject[];
   header: string;
+
   loading: boolean;
   googleAnalyticId?: string;
 }) => {
@@ -98,18 +99,17 @@ const ExternalProjectCard = ({
                     {item.title}
                   </h2>
                   {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
-                      </div>
+                    <div className="w-full h-auto flex items-center justify-center overflow-hidden rounded-lg">
+                      <LazyImage
+                        src={item.imageUrl}
+                        alt={'thumbnail'}
+                        placeholder={skeleton({
+                          widthCls: 'w-full',
+                          heightCls: 'h-full',
+                          shape: '',
+                        })}
+                        className="w-auto h-auto max-w-full max-h-64 object-contain"
+                      />
                     </div>
                   )}
                   <p className="mt-2 text-base-content text-sm text-justify">
