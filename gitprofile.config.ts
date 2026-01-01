@@ -45,7 +45,7 @@ const CONFIG = {
       ],
     },
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+  seo: { title: 'Utkarsh Gupta', description: '', imageURL: '' },
   social: {
     linkedin: 'utkarshgupta-dev',
     x: 'Utkarshgupta188',
